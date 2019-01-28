@@ -1,4 +1,8 @@
 .logon 127.0.0.1/dbc, dbc;
+
+RECORD 2;
+SET RECORD VARTEXT ",";
+
 DEFINE Crime_ID Integer,
 Report_dt timestamp(6),
 call_dt timestamp(6),
@@ -12,7 +16,7 @@ state char(2),
 agency_id integer,
 address_type varchar(45),
 common_location varchar(45)
-FILE = '/root/Desktop/kaggle/police-department-calls-for-service.txt'
+FILE = '/root/Desktop/kagle/police-department-calls-for-service.csv'
 
 BEGIN LOADING tutorial.Service_Calls 
 ERRORFILES tutorial.Service_Calls_ERR1, tutorial.Service_Calls_ERR2
