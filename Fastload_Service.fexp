@@ -4,19 +4,19 @@ RECORD 2;
 SET RECORD VARTEXT ",";
 
 DEFINE 
-Crime_ID VARCHAR(100),
-Report_dt VARCHAR(100),
-call_dt VARCHAR(100),
-offense_dt VARCHAR(100),
-call_time VARCHAR(100),
-call_dt_time VARCHAR(100),
-disposition VARCHAR(100),
-address varchar(100),
-city varchar(100),
-state VARCHAR(100),
-agency_id VARCHAR(100),
-address_type varchar(100),
-common_location varchar(100)
+Crime_ID (VARCHAR(100)),
+Report_dt (VARCHAR(100)),
+call_dt (VARCHAR(100)),
+offense_dt (VARCHAR(100)),
+call_time (VARCHAR(100)),
+call_dt_time (VARCHAR(100)),
+disposition (VARCHAR(100)),
+address (VARCHAR(100)),
+city (VARCHAR(100)),
+state (VARCHAR(100)),
+agency_id (VARCHAR(100)),
+address_type (VARCHAR(100)),
+common_location (VARCHAR(100))
 FILE = '/root/Desktop/kagle/police-department-calls-for-service.csv'
 
 BEGIN LOADING tutorial.Service_Calls 
