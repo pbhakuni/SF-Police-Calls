@@ -1,5 +1,8 @@
 .logon 127.0.0.1/dbc,dbc;
 
+RECORD 2;
+SET RECORD VARTEXT ",";
+
 DEFINE 
 incident_num integer,
 category varchar(45),
@@ -14,7 +17,7 @@ x_axis integer,
 y_axis integer,
 location varchar(500),
 pd_id bigint
-FILE = '/root/Desktop/kaggle/police-department-incidents.txt';
+FILE = '/root/Desktop/kagle/police-department-incidents.csv';
 
 
 BEGIN LOADING tutorial.Incidents
