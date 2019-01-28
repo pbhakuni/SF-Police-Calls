@@ -17,7 +17,7 @@ state (VARCHAR(100)),
 agency_id (VARCHAR(100)),
 address_type (VARCHAR(100)),
 common_location (VARCHAR(100))
-FILE = '/root/Desktop/kagle/police-department-calls-for-service.csv'
+FILE = /root/Desktop/kagle/police-department-calls-for-service.csv;
 
 BEGIN LOADING tutorial.Service_Calls 
 ERRORFILES tutorial.Service_Calls_ERR1, tutorial.Service_Calls_ERR2
