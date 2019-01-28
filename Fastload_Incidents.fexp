@@ -4,25 +4,25 @@ RECORD 2;
 SET RECORD VARTEXT ",";
 
 DEFINE 
-incident_num integer,
-category varchar(45),
-description varchar(45),
-day_of_Week varchar(20),
-incident_dt timestamp(6),
-incident_time timestamp(6),
-pdDistrict varchar(45),
-resolution varchar(45),
-Address varchar(45),
-x_axis integer,
-y_axis integer,
-location varchar(500),
-pd_id bigint
-FILE = '/root/Desktop/kagle/police-department-incidents.csv';
+incident_num (varchar(100)),
+category (varchar(100)),
+description (varchar(100)),
+day_of_Week (varchar(100)),
+incident_dt (varchar(100)),
+incident_time (varchar(100)),
+pdDistrict (varchar(100)),
+resolution (varchar(100)),
+Address (varchar(100)),
+x_axis (varchar(100)),
+y_axis (varchar(100)),
+location (varchar(100)),
+pd_id (varchar(100))
+FILE = /root/Desktop/kagle/police-department-incidents.csv;
 
 
 BEGIN LOADING tutorial.Incidents
 ERRORFILES tutorial.Incidents_ERR1, tutorial.Incidents_ERR2
-Checkpoint 1000;
+Checkpoint 10000;
 
 INSERT INTO tutorial.Incidents 
 values
