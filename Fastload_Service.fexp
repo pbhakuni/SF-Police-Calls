@@ -1,0 +1,40 @@
+.logon 127.0.0.1/dbc, dbc;
+DEFINE Crime_ID Integer,
+Report_dt timestamp(6),
+call_dt timestamp(6),
+offense_dt timestamp(6),
+call_time timestamp(6),
+call_dt_time timestamp(6),
+disposition char(20),
+address varchar(45),
+city varchar(45),
+state char(2),
+agency_id integer,
+address_type varchar(45),
+common_location varchar(45)
+FILE = '/root/Desktop/kaggle/police-department-calls-for-service.txt'
+
+BEGIN LOADING tutorial.Service_Calls 
+ERRORFILES tutorial.Service_Calls_ERR1, tutorial.Service_Calls_ERR2
+CHECKPOINT 1000;
+
+INSERT INTO tutorial.Service_Calls VALUES 
+(
+:Crime_ID ,
+:Report_dt ,
+:call_dt ,
+:offense_dt ,
+:call_time ,
+:call_dt_time ,
+:disposition ,
+:address ,
+:city ,
+:state ,
+:agency_id integer,
+:address_type ,
+:common_location 
+);
+
+END loading;
+
+LOGOFF;
